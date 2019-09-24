@@ -17,14 +17,17 @@ services:
       - h.gui
   redis:
     image: redis
+    restart: unless-stopped
     networks:
       - h.redis
   postgres:
     image: postgres
+    restart: unless-stopped
     networks:
       - h.postgres
   api:
     image: nginx
+    restart: unless-stopped
     networks:
       - h.api
       - h.redis
@@ -34,6 +37,7 @@ services:
       - postgres
   gui:
     image: nginx
+    restart: unless-stopped
     networks:
       - h.gui
 
