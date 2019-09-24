@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  proxy:
+    image: nginx
+    restart: unless-stopped
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/www/certbot:/var/www/certbot
+    ports:
+      - "80:80"
+      - "443:443"
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    networks:
+      - h.api
+      - h.gui
+  redis:
+    image: redis
+    networks:
+      - h.redis
+  postgres:
+    image: postgres
+    networks:
+      - h.postgres
+  api:
+    image: nginx
+    networks:
+      - h.api
+      - h.redis
+      - h.postgres
+    depends_on:
+      - redis
+      - postgres
+  gui:
+    image: nginx
+    networks:
+      - h.gui
+
+networks:
+  h.redis:
+  h.postgres:
+  h.api:
+  h.gui:
