@@ -1,14 +1,26 @@
 Nginx
--- create 'certgen' container (which runs by schedule)
-    (on port 80 to, generate letsencrypt certs and put them to /etc/nginx/certs)
--- create 'proxy' container (on 443)
-
-Frontend
--- create React Frontend app
--- create container for ^^^
+[x] setup lastpass
+[x] create 'proxy' container (on 443)
+[ ] dev docker procedure
+[ ] lastpass updates
+[?] remove domain name from configs
 
 Backend (API)
--- create Express app
--- create container for ^^^
-Database
--- create ArangoDB container
+[x] create Express app
+[ ] create container for ^^^
+[ ] dev docker procedure
+
+Frontend
+[ ] create React Frontend app
+[ ] create container for ^^^
+[ ] dev docker procedure
+
+Postgres
+[x] create Postgres container
+[ ] dev docker procedure
+[ ] properly setup it
+
+Redis
+[x] create REdis container
+[ ] dev docker procedure
+[ ] properly setup it

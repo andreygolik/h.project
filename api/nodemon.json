@@ -1,0 +1,8 @@
+{
+  "verbose": false,
+  "ignore": [
+    "dist/*",
+    "logs/*",
+    "*.test.ts"
+  ]
+}
