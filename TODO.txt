@@ -1,3 +1,6 @@
+General
+[?] make repository private
+
 Nginx
 [x] setup lastpass
 [x] create 'proxy' container (on 443)
@@ -9,6 +12,11 @@ Backend (API)
 [x] create Express app
 [ ] create container for ^^^
 [ ] dev docker procedure
+[ ] describe in README
+[ ] improve server.js
+[ ] add Helmet and CORS
+[ ] setup Logger
+[ ] add test engine
 
 Frontend
 [ ] create React Frontend app
