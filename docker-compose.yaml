@@ -17,7 +17,7 @@ services:
       - "443:443"
     networks:
       - h.api
-      - h.gui
+      # - h.gui
   # redis:
   #   image: redis
   #   restart: unless-stopped
@@ -38,8 +38,8 @@ services:
       - ./.env
     networks:
       - h.api
-      - h.redis
-      - h.postgres
+      # - h.redis
+      # - h.postgres
     # depends_on:
     #   - redis
     #   - postgres
@@ -50,7 +50,7 @@ services:
   #     - h.gui
 
 networks:
-  h.redis:
-  h.postgres:
   h.api:
-  h.gui:
+  # h.redis:
+  # h.postgres:
+  # h.gui:
