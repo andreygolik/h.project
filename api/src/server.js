@@ -54,9 +54,10 @@ function onListening() {
   const addr = server.address();
   const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  console.log('Server is listening on ' + bind);
 }
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.H_API_PORT || '3000');
 app.set('port', port);
 
 const server = http.createServer(app);

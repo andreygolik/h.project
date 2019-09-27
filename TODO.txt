@@ -5,14 +5,15 @@ Nginx
 [x] setup lastpass
 [x] create 'proxy' container (on 443)
 [ ] dev docker procedure
+[x] prod docker-compose
 [ ] lastpass updates
 [?] remove domain name from configs
 
 Backend (API)
 [x] create Express app
-[ ] create container for ^^^
-[ ] dev docker procedure
-[ ] describe in README
+[x] create container for ^^^
+[x] dev docker procedure
+[x] describe in README
 [ ] improve server.js
 [ ] add Helmet and CORS
 [ ] setup Logger
