@@ -1,6 +1,6 @@
 # Rest API Server
 
-## Development
+## Development in Docker
 
 To run development Docker use docker-compose:
 
