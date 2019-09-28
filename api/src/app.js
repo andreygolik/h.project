@@ -24,6 +24,7 @@ app.use(
     dest: path.join(__dirname, 'public'),
     indentedSyntax: false,
     sourceMap: true,
+    outputStyle: 'expanded',
   })
 );
 app.use(express.static(path.join(__dirname, 'public')));

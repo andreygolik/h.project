@@ -5,6 +5,10 @@ Thumbs.db
 # Dist folder
 dist
 
+# Built CSS
+src/public/stylesheets/**/*.css
+src/public/stylesheets/**/*.css.map
+
 # Logs
 logs
 *.log
